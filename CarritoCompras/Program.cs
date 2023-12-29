@@ -13,8 +13,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 builder.Services.AddAuthorization(options=>
 {
-    options.AddPolicy("RequireAdminOrCliente", policy =>
-    policy.RequireRole("Administrador", "Cliente"));
+    options.AddPolicy("RequireAdmin", policy =>
+    policy.RequireRole("Administrador"));
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>

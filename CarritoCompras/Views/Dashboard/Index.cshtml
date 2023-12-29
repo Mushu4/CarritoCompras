@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="Container mt-4">
+    <h1 class="mb-4">Bienvenido</h1>
+    <hr />
+    <div class="list-group">
+        @* Enlaces *@
+        <a href="@Url.Action("Index", "Usuarios")" class="list-group-item list-group-item-action">Usuario</a>
+        <a href="@Url.Action("Index", "Roles")" class="list-group-item list-group-item-action">Roles</a>
+        <a href="@Url.Action("Index", "Productos")" class="list-group-item list-group-item-action">Productos</a>
+        <a href="@Url.Action("Index", "Pedidos")" class="list-group-item list-group-item-action">Pedidos</a>
+        <a href="@Url.Action("Index", "DetallePedidos")" class="list-group-item list-group-item-action">Detalle Pedidos</a>
+        <a href="@Url.Action("Index", "Categorias")" class="list-group-item list-group-item-action">Categorias</a>
+    </div>
+</div>
