@@ -124,5 +124,15 @@ namespace CarritoCompras.Controllers
             carritoViewModel.Total = carritoViewModel.Items.Sum(item => item.Subtotal);
             return carritoViewModel;
         }
+        protected IActionResult HandleError(Exception e)
+        {
+            return View(
+                    "Error",
+                    new ErrorViewModel
+                    {
+                        RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+                    }
+             );
+        }
     }
 }

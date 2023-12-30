@@ -40,7 +40,7 @@ namespace CarritoCompras.Controllers
         // GET: Productos/Create
         public IActionResult Create()
         {
-            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Nombre");
+            ViewData["CategoriaId"] = new SelectList(_context.Categorias, "CategoriaId", "Descripcion");
             return View();
         }
 
@@ -49,7 +49,7 @@ namespace CarritoCompras.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductoId,Codigo,Modelo,Descripcion,Precio,CategoriaId,Stock,Disponible")] Producto producto)
+        public async Task<IActionResult> Create([Bind("ProductoId,Codigo,Nombre,Modelo,Descripcion,Precio,CategoriaId,Stock,Disponible")] Producto producto)
         {
 
             var cat = await _context.Categorias

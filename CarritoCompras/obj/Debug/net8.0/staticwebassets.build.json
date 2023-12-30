@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "i4I9VE0A0K+BHTjik3qnUrkjqOAYfVxgzQiWjhAvAzY=",
+  "Hash": "rfVYY11nzReR2l929UiyAmkqJqYfi8OsUyuczfkd8a0=",
   "Source": "CarritoCompras",
   "BasePath": "_content/CarritoCompras",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\js\\breadcrumb.js",
+      "SourceId": "CarritoCompras",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\",
+      "BasePath": "_content/CarritoCompras",
+      "RelativePath": "js/breadcrumb.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\breadcrumb.js"
     },
     {
       "Identity": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\js\\site.js",
