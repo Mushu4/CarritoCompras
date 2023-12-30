@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CarritoCompras.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
       "Id": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

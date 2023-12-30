@@ -6,14 +6,10 @@ using CarritoCompras.Models;
 
 namespace CarritoCompras.Controllers
 {
-    public class UsuariosController : Controller
+    public class UsuariosController : OrigenController
     {
-        private readonly ApplicationDbContext _context;
-
-        public UsuariosController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        public UsuariosController(ApplicationDbContext context):base(context)
+        {}
 
         // GET: Usuarios
         public async Task<IActionResult> Index()

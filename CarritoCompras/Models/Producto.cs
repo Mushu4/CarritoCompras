@@ -10,6 +10,8 @@ namespace CarritoCompras.Models
         [Required]
         public string Codigo { get; set; } = null!;
         [Required]
+        public string Nombre { get; set; } = null!;
+        [Required]
         public string Modelo { get; set; } = null!;
         [Required]
         public string Descripcion { get; set; } = null!;

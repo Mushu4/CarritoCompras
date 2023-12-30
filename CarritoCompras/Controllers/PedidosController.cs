@@ -6,14 +6,11 @@ using CarritoCompras.Models;
 
 namespace CarritoCompras.Controllers
 {
-    public class PedidosController : Controller
+    public class PedidosController : OrigenController
     {
-        private readonly ApplicationDbContext _context;
 
-        public PedidosController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        public PedidosController(ApplicationDbContext context):base(context)
+        {}
 
         // GET: Pedidos
         public async Task<IActionResult> Index()

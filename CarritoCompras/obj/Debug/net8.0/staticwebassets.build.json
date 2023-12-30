@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EhMb006wvxQABn6a2qU021DmdYY+GWyjzvaGsw/3t+U=",
+  "Hash": "i4I9VE0A0K+BHTjik3qnUrkjqOAYfVxgzQiWjhAvAzY=",
   "Source": "CarritoCompras",
   "BasePath": "_content/CarritoCompras",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CarritoCompras.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\css\\bootstrap.min.css",
+      "SourceId": "CarritoCompras",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\",
+      "BasePath": "_content/CarritoCompras",
+      "RelativePath": "css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
       "Identity": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\css\\site.css",
