@@ -17,10 +17,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\js\\breadcrumb.js",
-      "PackagePath": "staticwebassets\\js\\breadcrumb.js"
-    },
-    {
       "Id": "C:\\Users\\Andrés\\CarritoCompras\\CarritoCompras\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
