@@ -42,4 +42,4 @@ Este proyecto es una aplicación que realiza la tarea Carrito de Compras desarro
 
 1. Asegúrate de tener una conexión válida a una base de datos SQL Server.
 2. Actualiza la cadena de conexión en `appsettings.json` para reflejar tu configuración.
-3. Ejecutar Script suministrados o tambien  se puede crear la base de datos a partir de las migraciones con el comando `dotnet ef database update` (esto lo que hara es utilizar Entity Framework para crear la Base de Datos.
+3. Ejecutar Script suministrados o tambien  se puede crear la base de datos a partir de las migraciones con el comando `dotnet ef database update` (esto lo que hara es utilizar Entity Framework para crear la Base de Datos).
