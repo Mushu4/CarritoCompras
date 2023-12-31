@@ -1,0 +1,77 @@
+CREATE DATABASE [CarritoCompras];
+
+Use CarritoCompras
+
+      CREATE TABLE [Categorias] (
+          [CategoriaId] int NOT NULL IDENTITY,
+          [Nombre] nvarchar(max) NOT NULL,
+          [Descripcion] nvarchar(max) NOT NULL,
+          CONSTRAINT [PK_Categorias] PRIMARY KEY ([CategoriaId])
+      );
+
+      CREATE TABLE [Roles] (
+          [RolId] int NOT NULL IDENTITY,
+          [Nombre] nvarchar(max) NOT NULL,
+          CONSTRAINT [PK_Roles] PRIMARY KEY ([RolId])
+      );
+
+      CREATE TABLE [Productos] (
+          [ProductoId] int NOT NULL IDENTITY,
+          [Codigo] nvarchar(max) NOT NULL,
+          [Nombre] nvarchar(max) NOT NULL,
+          [Modelo] nvarchar(max) NOT NULL,
+          [Descripcion] nvarchar(max) NOT NULL,
+          [Precio] decimal(18,2) NOT NULL,
+          [CategoriaId] int NOT NULL,
+          [Stock] int NOT NULL,
+          [Disponible] bit NOT NULL,
+          CONSTRAINT [PK_Productos] PRIMARY KEY ([ProductoId]),
+          CONSTRAINT [FK_Productos_Categorias_CategoriaId] FOREIGN KEY ([CategoriaId]) REFERENCES [Categorias] ([CategoriaId]) ON DELETE NO ACTION
+      );
+
+      CREATE TABLE [Usuarios] (
+          [UsuarioId] int NOT NULL IDENTITY,
+          [Nombre] nvarchar(max) NOT NULL,
+          [Telefono] nvarchar(max) NOT NULL,
+          [NombreUsuario] nvarchar(max) NOT NULL,
+          [Contrasena] nvarchar(max) NOT NULL,
+          [Correo] nvarchar(max) NOT NULL,
+          [Direccion] nvarchar(max) NOT NULL,
+          [Ciudad] nvarchar(max) NOT NULL,
+          [Departamento] nvarchar(max) NOT NULL,
+          [CodigoPostal] nvarchar(max) NOT NULL,
+          [RolId] int NOT NULL,
+          CONSTRAINT [PK_Usuarios] PRIMARY KEY ([UsuarioId]),
+          CONSTRAINT [FK_Usuarios_Roles_RolId] FOREIGN KEY ([RolId]) REFERENCES [Roles] ([RolId]) ON DELETE CASCADE
+      );
+
+      CREATE TABLE [Pedidos] (
+          [PedidoId] int NOT NULL IDENTITY,
+          [UsuarioId] int NOT NULL,
+          [Fecha] datetime2 NOT NULL,
+          [Estado] nvarchar(max) NOT NULL,
+          [Total] decimal(18,2) NOT NULL,
+          CONSTRAINT [PK_Pedidos] PRIMARY KEY ([PedidoId]),
+          CONSTRAINT [FK_Pedidos_Usuarios_UsuarioId] FOREIGN KEY ([UsuarioId]) REFERENCES [Usuarios] ([UsuarioId]) ON DELETE CASCADE
+      );
+
+      CREATE TABLE [DetallePedidos] (
+          [DetallePedidoId] int NOT NULL IDENTITY,
+          [PedidoId] int NOT NULL,
+          [ProductoId] int NOT NULL,
+          [Cantidad] int NOT NULL,
+          [Precio] decimal(18,2) NOT NULL,
+          CONSTRAINT [PK_DetallePedidos] PRIMARY KEY ([DetallePedidoId]),
+          CONSTRAINT [FK_DetallePedidos_Pedidos_PedidoId] FOREIGN KEY ([PedidoId]) REFERENCES [Pedidos] ([PedidoId]) ON DELETE CASCADE,
+          CONSTRAINT [FK_DetallePedidos_Productos_ProductoId] FOREIGN KEY ([ProductoId]) REFERENCES [Productos] ([ProductoId]) ON DELETE CASCADE
+      );
+
+-- Insertar el rol de Administrador
+INSERT INTO [Roles] ([Nombre]) VALUES ('Administrador');
+
+-- Insertar el rol de Cliente
+INSERT INTO [Roles] ([Nombre]) VALUES ('Cliente');
+
+-- Insertar el usuario con el rol "Administrador"
+INSERT INTO [Usuarios] ([Nombre], [Telefono], [NombreUsuario], [Contrasena], [Correo], [Direccion], [Ciudad], [Departamento], [CodigoPostal], [RolId])
+VALUES ('Admin', '123456789', 'admin', 'admin123', 'admin@example.com', 'calle123', 'Barranquilla', 'Atlantico', '12345', 1);
