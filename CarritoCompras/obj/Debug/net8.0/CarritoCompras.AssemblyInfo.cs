@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarritoCompras")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3de05b627fc1c4b4bf9790038af9920815ca79d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dba865dccef726fc58cfc95c1f0e3db46a3deef")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarritoCompras")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarritoCompras")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
